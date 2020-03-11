@@ -1,0 +1,210 @@
+@import url('https://fonts.googleapis.com/css?family=Ubuntu&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Open+Sans&display=swap');
+body{
+  background-color: rgb(233, 233, 233) !important;
+}
+input[type="radio"], input[type="checkbox"]{
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+.wrapper{
+  background-color: rgb(244, 244, 244);
+  box-shadow: 0px 0px 8px black;
+  position: absolute;
+  top: 15vh;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 50vw;
+  min-height: 600px;
+  height: auto;
+  margin-bottom: 100px;
+  padding-bottom: 50px;
+}
+.test-header{
+  background-color: rgb(41, 64, 190);
+  position: relative;
+  width: 100%;
+  height: auto;
+  padding: 50px 0px 25px 0px;
+  text-align: center;
+  color: white;
+  font-family: "Ubuntu", sans-serif;
+}
+h1.test-title{
+  font-size: 40px;
+}
+p.test-desc{
+  margin-top: 20px;
+  font-size: 19px;
+}
+.test{
+  padding: 20px 40px;
+  height: auto;
+  font-family: "Open sans", sans-serif;
+}
+.test span{
+  color: rgb(109, 111, 109);
+  font-size: 16px;
+  margin-top: 20px;
+}
+.form-group{
+  margin-top: 40px;
+  border-style: none;
+  font-size: 16px;
+}
+.form-group legend{
+  font-size: 18px;
+}
+.radio_quest{
+  margin-left: 20px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  width: 50vh;
+  height: 30px;
+  line-height: 30px;
+}
+.radio_quest input{
+  width: 15px;
+  height: 15px;
+  cursor: pointer;
+  margin-top: 5px;
+}
+.radio_quest label{
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  cursor: pointer;
+}
+.text_quest{
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+.text_quest input{
+  display: block;
+  line-height: 35px;
+  background-clip: padding-box;
+  border: 1px solid #ced4da;
+  border-radius: .25em;
+  width: 95%;
+  height: 35px;
+  font-size: 1.1em;
+  padding: 6px;
+  padding-left: 15px;
+}
+.check_quest{
+  margin-left: 20px;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  width: 50vh;
+  height: 30px;
+  line-height: 30px;
+}
+.check_quest input{
+  width: 15px;
+  height: 15px;
+  cursor: pointer;
+  margin-top: 5px;
+}
+.check_quest label{
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  cursor: pointer;
+}
+#submit{
+  margin-top: 30px;
+  margin-left: 20px;
+  height: 60px;
+  width: 200px;
+  background-color: rgb(47, 33, 204);
+  color: white;
+  font-size: 20px;
+  box-shadow: 0px 0px 10px rgb(164, 174, 180);
+  cursor: pointer;
+  border: none;
+}
+#submit:hover{
+  background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), rgb(47, 33, 204);
+  font-weight: bold;
+  font-size: 22px;
+  box-shadow: 0px 0px 5px black;
+}
+.go_to_cat {
+  background-color: rgb(41, 64, 190);
+  width: 200px;
+  height: 60px;
+  line-height: 60px;
+  border-radius: 3px;
+  float: right;
+  position: relative;
+  top: -60px;
+  text-align: center;
+  display: block;
+  height: 100%;
+  color: white;
+  text-decoration: none;
+  font-size: 1.8em;
+  font-family: "Roboto", sans-serif;
+  font-weight: bold;
+  font-style: italic;
+}
+.go_to_cat:hover{
+  box-shadow: 1px 1px 10px black;
+  transform: scale(1.05);
+}
+.result{
+  margin-left: 40px;
+  margin-top: 30px;
+  height: 50px;
+  line-height: 50px;
+  padding: 10px 30px;
+  width: 280px;
+  background-color: rgb(200, 200, 200);
+  font-family: "Roboto", sans-serif;
+  font-size: 1.5em;
+  font-weight: bold;
+  font-style: italic;
+}
+@media screen and (max-width: 1500px) {
+  .wrapper{
+    width: 60vw;
+  }
+  .result{
+    padding: 5px 20px !important;
+  }
+}
+@media screen and (max-width: 1150px) {
+  .wrapper{
+    width: 70vw;
+  }
+}
+@media screen and (max-width: 960px) {
+  .wrapper{
+    width: 80vw;
+  }
+  .go_to_cat{
+    float: left;
+    top: 20px;
+  }
+  .result{
+    white-space: nowrap;
+    margin-left: 0 !important;
+  }
+}
+@media screen and (max-width: 766px) {
+  .wrapper{
+    width: 90vw;
+  }
+}
+@media screen and (max-width: 640px) {
+  .wrapper{
+    width: 95vw;
+  }
+}
+@media screen and (max-width: 520px) {
+  .wrapper{
+    width: 100vw;
+    left: 0;
+    transform: none;
+  }
+}

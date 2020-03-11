@@ -1,0 +1,184 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto+Slab&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Anton&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Ubuntu&display=swap');
+body{
+  background-color: #fafafa;
+}
+.wrapper{
+  position: absolute;
+  width: 70vw;
+  height: 500px;
+  top: 160px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+h1.page_title{
+  font-family: "Roboto", sans-serif;
+  font-weight: bolder;
+  font-size: 48px;
+}
+.nav_cat{
+  margin-left: 0 !important;
+}
+.cat{
+  display: inline-block;
+  text-align: center;
+  margin-top: 40px;
+}
+.btn{
+  background: none;
+  border: 2px solid black;
+  border-radius: 3px;
+  font-family: "Ubuntu", sans-serif;
+  text-decoration: none;
+  color: black;
+  font-size: 1.3em;
+  margin: 0px 10px;
+  padding: 12px 20px;
+  min-width: 150px;
+  cursor: pointer;
+  transition: color 0.4s linear;
+  position: relative;
+}
+.btn:hover{
+  color: #fff;
+}
+.btn::before{
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: #000;
+  z-index: -1;
+  transition: transform 0.5s;
+  transform-origin: 0 0;
+  transition-timing-function: ease-in-out;
+  transform: scaleX(0);
+}
+.btn:hover::before{
+  transform: scaleX(1);
+}
+.btn.active{
+  background-color: black;
+  color: white;
+}
+.tests{
+  margin-top: 50px;
+}
+.test{
+  background-color: white;
+  max-width: 400px;
+  min-width: 350px;
+  height: 330px;
+  margin: 50px 0 !important;
+  margin-left: 0px;
+  border: 1px solid rgb(99, 99, 99);
+}
+.test:hover{
+  box-shadow: 1px 1px 10px black;
+}
+.test_image{
+  background-color: rgb(41, 64, 190);
+  min-height: 150px;
+  width: 100%;
+  text-align: center;
+  padding: 5%;
+}
+.test_image h2{
+  position: relative;
+  color: white;
+  font-size: 32px;
+  font-family: "Ubuntu", sans-serif;
+}
+.test_info{
+  padding: 25px;
+  padding-bottom: 100px;
+  font-size: 18px;
+  font-variant: small-caps;
+  line-height: 25px;
+  text-decoration: none;
+}
+.go_to_test {
+  background-color: rgb(41, 64, 190);
+  width: 150px;
+  height: 45px;
+  line-height: 45px;
+  border-radius: 3px;
+  float: right;
+  margin-top: 20px;
+  margin-right: 3%;
+  text-align: center;
+}
+.go_to_test a{
+  display: block;
+  height: 100%;
+  width: 100%;
+
+  color: white;
+  text-decoration: none;
+  font-size: 1.5em;
+  font-family: "Roboto", sans-serif;
+  font-weight: bold;
+  font-style: italic;
+}
+.go_to_test:hover{
+  box-shadow: 1px 1px 10px black;
+  transform: scale(1.05);
+}
+.paginator{
+  margin-top: 20px;
+  margin-bottom: 50px;
+}
+.pag_page{
+  display: inline-block;
+  height: 50px;
+  line-height: 50px;
+  width: 50px;
+  border-radius: 50px;
+  background-color: rgb(216, 218, 214);
+  margin: 0px 5px;
+  text-align: center;
+  text-decoration: none;
+  color: black;
+  font-family: "Ubuntu", sans-serif;
+  font-size: 1.25em;
+  font-weight: bold;
+  transition: color 0.5s linear;
+  transition: background-color 0.5s linear
+}
+.pag_page:hover{
+  color: #fff;
+  background-color: #000;
+}
+.pag_page.active{
+  color: #fff;
+  background-color: #000;
+}
+@media screen and (max-width: 1480px) {
+  .wrapper{
+    width: 80vw;
+  }
+}
+@media screen and (max-width: 1300px) {
+  .wrapper{
+    width: 90vw;
+  }
+}
+@media screen and (max-width: 768px) {
+  .wrapper{
+    width: 90vw;
+  }
+  .test{
+    max-width: none;
+    min-width: none;
+    width: 500px
+  }
+}
+@media screen and (max-width: 525px) {
+  .test{
+    max-width: 400px;
+    min-width: 350px;
+  }
+}

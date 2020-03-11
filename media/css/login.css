@@ -1,0 +1,89 @@
+/*conect fonts*/
+@import url('https://fonts.googleapis.com/css?family=Lobster&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Fjalla+One&display=swap');
+body{
+  background: linear-gradient(rgba(0, 0, 0, 0.35), rgba(0, 0, 0, 0.35)), url('../images/login.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: top;
+}
+
+.login{
+  width: 420px;
+  height: auto;
+  position: absolute;
+  top: 20% !important;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: rgba(117,117,117,.53);
+  box-shadow: 0 0 10px rgba(0,0,0,0.5);
+  padding: 20px;
+}
+
+.logheader {
+  font-family: 'Lobster', cursive;
+  color: rgb(16,11,70);
+  margin-bottom: 20px;
+  text-shadow: 2px 2px #aaa;
+  font-size: 3em;
+  text-align: center;
+  font-weight: 500;
+}
+
+form, div{
+  display: block;
+}
+
+label{
+  position: relative;
+  display: inline-block;
+  width: auto;
+  margin-left: 50%;
+  margin-bottom: 10px;
+  transform: translateX(-50%);
+  color: black;
+  font-size: 1.4em;
+  font-family: 'Fjalla One', sans-serif;
+  text-shadow: 2px 2px #aaa;
+  font-weight: bold;
+  text-align: center;
+}
+
+input{
+  display: block;
+  line-height: 1.5;
+  margin-bottom: 15px;
+  background-clip: padding-box;
+  border: 1px solid #ced4da;
+  border-radius: .25em;
+  width: 95%;
+  font-size: 1em;
+  font-family: 'Tahoma', sans-serif;
+  padding: 6px;
+  padding-left: 10px;
+}
+
+button{
+  font-family: 'Fjalla One', sans-serif;
+  font-size: 1.3em;
+  font-weight: bold;
+  width: 100%;
+  line-height: 1.5;
+  padding: 8px;
+  border: 1px solid #343a40;
+  border-radius: .25em;
+  cursor: pointer;
+  background-color: #343a40;
+  color: white;
+  font-weight: 400;
+  margin-bottom: 10px;
+}
+
+.errors{
+  margin-bottom: 10px;
+}
+small{
+  color: rgb(26, 26, 26);
+  font-size: 18px;
+}

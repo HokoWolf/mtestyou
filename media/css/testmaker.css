@@ -1,0 +1,498 @@
+@import url('https://fonts.googleapis.com/css?family=Ubuntu&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Open+Sans&display=swap');
+body{
+  background-color: rgb(233, 233, 233) !important;
+}
+input{
+  cursor: auto !important;
+}
+input[type="radio"]{
+  width: 18px !important;
+  height: 18px !important;
+}
+input[type="checkbox"]{
+  width: 18px !important;
+  height: 18px !important;
+}
+#wrapper{
+  background-color: rgb(244, 244, 244);
+  box-shadow: 0px 0px 8px black;
+  position: absolute;
+  top: 15vh;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 50vw;
+  min-height: 580px;
+  height: auto;
+  margin-bottom: 100px;
+  padding-bottom: 50px;
+}
+.test-header{
+  background-color: rgb(41, 64, 190);
+  position: relative;
+  width: 100%;
+  min-height: 180px;
+  height: auto;
+  padding: 50px 0px 25px 0px;
+  text-align: center;
+  color: white;
+  font-family: "Ubuntu", sans-serif;
+}
+
+
+#test_title{
+  position: relative;
+  overflow: hidden;
+  display: block;
+  width: 80%;
+  padding: 10px 40px;
+  margin: 0 auto;
+  text-align: center;
+  background-color: rgb(41, 64, 190);
+  color: white;
+  font-size: 40px;
+  resize: none;
+}
+
+#test_desc{
+  position: relative;
+  overflow: hidden;
+  display: block;
+  width: 90%;
+  padding: 10px 20px;
+  margin: 0 auto;
+  margin-top: 25px;
+  background-color: rgb(41, 64, 190);
+  color: white;
+  font-size: 19px;
+  resize: none;
+}
+
+#test_title::placeholder, #test_desc::placeholder{
+  color: rgb(199, 199, 199);
+}
+
+#test_title:focus, #test_desc:focus{
+  outline: 3px solid #ccc;
+}
+
+
+.test-content{
+  padding: 20px 40px !important;
+  height: auto;
+}
+
+/*   questions   */
+
+.quest-form{
+  cursor: pointer;
+  padding: 0 10px;
+}
+.quest-form:hover{
+  background-color: #ddd;
+}
+.form-group{
+  margin-top: 40px;
+  border-style: none;
+  font-size: 15px;
+}
+.form-group:hover{
+  background-color: #ddd;
+}
+.form-group legend{
+  font-size: 16px;
+}
+.radio_quest{
+  margin-left: 20px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  width: 50vh;
+  height: 30px;
+  line-height: 30px;
+}
+.radio_quest input{
+  width: 15px;
+  height: 15px;
+  cursor: pointer;
+  margin-top: 5px;
+}
+.radio_quest label{
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  cursor: pointer;
+  margin-left: 10px;
+}
+.text_quest{
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+.text_quest input{
+  display: block;
+  line-height: 35px;
+  background-clip: padding-box;
+  border: 1px solid #ced4da;
+  border-radius: .25em;
+  width: 95%;
+  height: 35px;
+  font-size: 1em;
+  padding: 6px;
+  padding-left: 15px;
+  font-size: 16px;
+}
+.check_quest{
+  margin-left: 20px;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  width: 50vh;
+  height: 30px;
+  line-height: 30px;
+}
+.check_quest input{
+  width: 15px;
+  height: 15px;
+  cursor: pointer;
+  margin-top: 5px;
+}
+.check_quest label{
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  cursor: pointer;
+  margin-left: 10px;
+}
+
+/*  questions constructor   */
+
+.form-group.active{
+  padding: 20px 10px;
+  background-color: #ddd;
+  border-left: 5px solid rgb(41, 64, 190);
+  border-radius: 5px;
+  padding-bottom: 0;
+}
+.quest-text{
+  position: relative;
+  overflow: hidden;
+  display: block;
+  width: 90%;
+  padding: 8px 10px;
+  resize: none;
+  border: none;
+  border-radius: 3px;
+  border-bottom: 1px solid #999;
+  background-color: #eee;
+  font-size: 18px;
+  outline: none;
+}
+.quest-text:focus{
+  border-bottom: 2px solid blue !important;
+}
+
+.variant-text{
+  position: relative;
+  overflow: hidden;
+  display: inline-block;
+  width: 30vw !important;
+  padding: 8px 10px;
+  resize: none;
+  border: none;
+  border-radius: 3px;
+  background-color: #ececec !important;
+  outline: none;
+  font-size: 16px;
+  transform: translate(25px, -36px);
+}
+.form-group.active .check_quest{
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+.form-group.active .text_quest input{
+  width: 65%;
+}
+
+.variant-text::-moz-placeholder{color: #777;}
+.variant-text::placeholder{color: #777;}
+.variant-text:-ms-placeholder{color: #777;}
+.variant-text::-ms-placeholder{color: #777;}
+
+.variant-text:hover{
+  border-bottom: 2px solid #999;
+}
+.variant-text:focus{
+  border-bottom: 2px solid blue !important;
+}
+.variant-for-text{
+  height: 20px !important;
+  line-height: 20px !important;
+  padding-left: 5px !important;
+  width: 15vw !important;
+  margin-top: 10px !important;
+  margin-left: 15px !important;
+}
+
+.right-show{
+  position: relative;
+  left: 10px;
+  background: none;
+  font-size: 16px;
+  color: green;
+}
+.right-text-show{
+  position: relative;
+  left: 18vw !important;
+  top: -25px;
+  margin-bottom: 0 !important;
+  background: none;
+  font-size: 16px;
+  color: green;
+}
+hr{
+  margin-top: 10px !important;
+}
+.right{
+  position: relative;
+  top: -65px;
+  left: 35vw;
+  background: none;
+  cursor: pointer;
+  font-size: 16px;
+  color: #999;
+}
+.right:hover{
+  color: #000;
+}
+.r-check i{
+  color: green;
+}
+.r-check::after{
+  content: '  Right';
+  color: green;
+}
+.quest-delete{
+  color: #555;
+  cursor: pointer;
+  position: relative;
+  float: right;
+  right: 3%;
+  top: -30px;
+}
+.quest-delete:hover{
+  color: #000;
+}
+.variant-delete{
+  position: relative;
+  top: -65px;
+  left: 34vw;
+  background: none;
+  cursor: pointer;
+  font-size: 16px;
+  color: #777;
+}
+.variant-delete:hover{
+  color: #000;
+}
+.points-amount{
+  margin: 0 0 0 20px;
+  position: relative;
+  top: 15px;
+}
+.points-amount label{
+  font-size: 15px;
+  margin-right: 10px;
+}
+.points-amount input{
+  font-size: 16px;
+  padding: 5px;
+  outline: none;
+  width: 40px;
+  text-align: center;
+  border: none;
+}
+.points-amount input:hover{
+  border: 1px solid black;
+}
+.points-amount input:focus{
+  border: 1px solid blue;
+}
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    /* display: none; <- Crashes Chrome on hover*/
+    -webkit-appearance: none;
+ }
+ .add-variant{
+   position: relative;
+   margin: 0;
+   top: -20px;
+   right: 20px;
+   height: 40px;
+   width: 120px;
+   float: right;
+   font-size: 18px;
+   font-family: "Ubuntu", sans-serif;
+   color: rgb(41, 64, 190);
+   background-color: #ddd;
+   border: none;
+   border: 2px outset rgb(41, 64, 190);
+   cursor: pointer;
+   outline: none;
+ }
+ .add-variant span{
+   font-size: 24px;
+ }
+.add-variant:hover{
+  border: none;
+   background-color: rgb(41, 64, 190);
+   color: #fff;
+ }
+ #confirm{
+   display: block;
+   float: right;
+   position: relative;
+   right: 2vw;
+   top: -50px;
+   height: 50px;
+   width: 150px;
+   font-size: 20px;
+   font-family: "Ubuntu", sans-serif;
+   background-color: rgb(41, 64, 190);
+   color: #fff;
+   border: none;
+   cursor: pointer !important;
+   outline: none;
+ }
+ #confirm:hover{
+   background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), rgb(41, 64, 190);
+ }
+ #add_test{
+   position: relative;
+   left: 50px;
+   top: 0px;
+   display: block;
+   text-align: center;
+   margin-top: 20px;
+   margin-left: 40px;
+   bottom: 30px;
+   height: 50px;
+   line-height: 50px;
+   width: 50px;
+   border-radius: 50px;
+   font-size: 20px;
+   font-family: "Ubuntu", sans-serif;
+   background-color: rgb(41, 64, 190);
+   color: #fff;
+   border: none;
+   cursor: pointer;
+   outline: none;
+ }
+
+ #add_test span{
+   font-size: 28px;
+ }
+
+ #add_test:hover{
+   background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), rgb(41, 64, 190);
+ }
+#add_test_menu{
+  display: none;
+  position: relative;
+  top: 40px;
+  left: 115px;
+  background-color: #606060;
+  width: 150px;
+  height: auto;
+  padding: 10px 10px;
+  padding-bottom: 25px;
+}
+#add_test_menu li{
+  width: 100%;
+  cursor: pointer;
+  margin: 5px 0;
+}
+#add_test_menu li:hover{
+  background-color:rgb(50, 50, 50);
+}
+#add_test_menu li>a{
+  width: auto;
+  position: relative;
+  border: none;
+  background-color: rgba(0 ,0 ,0 , 0);
+  color: white;
+  font-size: 18px;
+  padding: 5px;
+  text-align: left;
+  margin-left: 20px;
+  cursor: pointer;
+  outline: none;
+}
+@import url('https://fonts.googleapis.com/css?family=Caladea&display=swap');
+.fa-text{
+  font-family: 'Caladea', ;
+  font-size: 24px;
+  font-weight: bold;
+}
+.text_quest.tt{
+  margin-top: -8px;
+  margin-bottom: -8px;
+  margin-left: 10px;
+  width: 85%;
+}
+.tt{
+  margin-top: 15px !important;
+}
+.variant-text.t{
+  margin-top: -8px;
+  margin-bottom: -8px;
+  transform: translate(0px, 0px);
+  height: 25px;
+  line-height: 25px;
+  width: 82%;
+}
+.td{
+  top: -22px !important;
+  left: 32vw !important;
+}
+#clear{
+  font-size: 20px;
+  background-color: rgb(41, 64, 190);
+  color: #fff;
+  text-align: center;
+  display: block;
+  height: 50px;
+  line-height: 50px;
+  width: 50px;
+  border-radius: 50px;
+  font-size: 20px;
+  border: none;
+  cursor: pointer;
+  outline: none;
+  position: relative;
+  left: 30px;
+  top: -50px;
+  z-index: 0;
+}
+#clear:hover{
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), rgb(41, 64, 190);
+}
+.categories{
+  position: relative;
+  float: left;
+  top: 20px;
+  left: 40px;
+}
+.select_desc{
+  font-size: 20px;
+  margin-right: 10px;
+}
+select{
+  font-family: 'Ubuntu', sans-serif;
+  font-size: 18px;
+  background-color: transparent;
+  color: white;
+  padding: 5px;
+  box-sizing: content-box;
+}
+option{
+  display: block;
+  color: #fff;
+  font-size: 17px;
+  background-color: rgb(41, 64, 190);
+}
