@@ -5,7 +5,7 @@
 
     $errors = array();
     if (trim($data['login']) == '') {
-      $errors[] = 'Enter your login!';
+      $errors[] = 'Enter yours login!';
     }
 
     if (trim($data['email']) == '') {
