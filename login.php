@@ -17,7 +17,7 @@
         }
       }
       else {
-        $errors[] = 'Password is not right!';
+        $errors[] = 'This Password is not right!';
       }
     }
     else {
