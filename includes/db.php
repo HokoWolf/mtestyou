@@ -1,7 +1,7 @@
 <?php
 
   require 'config.php';
-  include 'C:/Program Files/OSPanel/domains/maketestyou.loc/libs/rb.php';
+  include $_SERVER['DOCUMENT_ROOT'].'/../libs/rb.php';
 
   $link = mysqli_connect($config['db']['server'], $config['db']['username'], $config['db']['password']);
 
