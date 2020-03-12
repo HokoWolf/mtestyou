@@ -1,5 +1,5 @@
 <?php
-  require 'includes/insert_first_data.php';
+  require('includes/insert_first_data.php');
   $data = $_POST;
   if (isset($data['do_login'])) {
     $errors = array();
@@ -42,47 +42,39 @@
 </head>
 <body>
 
-  <?php require 'includes/header.php'; ?>
+  <?php require('includes/header.php'); ?>
 
   <div class="login" style="top: 20%;">
 
     <h1 class="logheader">LogIN</h1>
 
-      <form method="POST">
-
-        <div>
-          <label style="font-size: 1.8em;">Login</label>
-          <input type="text" name="login" placeholder="Enter login" value="<?php echo @$data['login']; ?>">
-        </div>
-
-        <div>
-          <label style="font-size: 1.7em;">Password</label>
-          <input type="password" name="password" placeholder="Enter your password">
-        </div>
+    <form method="POST">
+    
+      <div>
+        <label style="font-size: 1.8em;">Login</label>
+        <input type="text" name="login" placeholder="Enter login" value="<?php echo @$data['login']; ?>">
+      </div>
+      
+      <div>
+        <label style="font-size: 1.7em;">Password</label>
+        <input type="password" name="password" placeholder="Enter your password">
+      </div>
 
 				<?php
-				if (!empty($errors)) {
-					echo '<div class="errors" style="font-weight: bold; color: red; font-size: 1.2em; text-shadow: 1px 1px black; text-align: center;">'.$errors[0].'</div>';
-				}
+          if (!empty($errors))
+            echo '<div class="errors" style="font-weight: bold; color: red; font-size: 1.2em; text-shadow: 1px 1px black; text-align: center;">'.$errors[0].'</div>';
 				?>
 
         <button type="submit" name="do_login">LogIN</button>
 
         <?php
           if (isset($_GET['go_test_id'])) {
-            ?>
-            <small>You have no account? Create new account <a href="signup.php?go_test_id=<?php echo $_GET['go_test_id']; ?>">here</a></small>
-            <?php
-          }
-          else {
-            ?>
-            <small>You have no account? Create new account <a href="signup.php">here</a></small>
-            <?php
+            ?><small>You have no account? Create new account <a href="signup.php?go_test_id=<?php echo $_GET['go_test_id']; ?>">here</a></small><?php
+          } else {
+            ?><small>You have no account? Create new account <a href="signup.php">here</a></small><?php
           }
         ?>
-
       </form>
-
     </div>
 
 </body>

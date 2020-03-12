@@ -1,5 +1,5 @@
 <?php
-  require 'includes/insert_first_data.php';
+  require('includes/insert_first_data.php');
   $data = $_POST;
   if (isset($data['do_signup'])) {
 
@@ -44,8 +44,8 @@
       else {
         header('Location: /');
       }
-    }
-  }
+    } # end of adding new user
+  } # end of if(do_sign_up)
 ?>
 <!DOCTYPE html>
 <html>
@@ -62,7 +62,7 @@
 </head>
 <body>
 
-  <?php require 'includes/header.php'; ?>
+  <?php require('includes/header.php'); ?>
 
   <div class="login">
 
@@ -91,29 +91,23 @@
       </div>
 
 			<?php
-			   if (!empty($errors)) {
+			   if (!empty($errors))
            echo '<div class="errors" style="font-weight: bold; color: red; font-size: 1.2em; text-shadow: 1px 1px black; text-align: center;">'.$errors[0].'</div>';
-			   }
 			?>
 
       <button type="submit" class="btn btn-dark btn-lg btn-block" name="do_signup">SignUP</button>
 
       <?php
         if (isset($_GET['go_test_id'])) {
-          ?>
-          <small>You have no account? Create new account <a href="login.php?go_test_id=<?php echo $_GET['go_test_id']; ?>">here</a></small>
-          <?php
-        }
-        else {
-          ?>
-          <small>You have no account? Create new account <a href="login.php">here</a></small>
-          <?php
+          ?><small>You have no account? Create new account <a href="login.php?go_test_id=<?php echo $_GET['go_test_id']; ?>">here</a></small><?php
+        } else {
+          ?><small>You have no account? Create new account <a href="login.php">here</a></small><?php
         }
       ?>
 
       <input type="hidden" name="go_test_id" value="<?php echo $_GET['go_test_id']; ?>">
 
-    </form>
+    </form> <!--end of form-->
 
   </div>
 

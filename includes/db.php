@@ -1,7 +1,6 @@
 <?php
-
-  require 'config.php';
-  include $config['root'].'/libs/rb.php';
+  require_once("config.php");
+  require_once(dirname(__FILE__)."/../libs/rb.php");
 
   $link = mysqli_connect($config['db']['server'], $config['db']['username'], $config['db']['password']);
 

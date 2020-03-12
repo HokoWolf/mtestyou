@@ -1,5 +1,5 @@
 <?php
-  require '../includes/insert_first_data.php';
+  require('../includes/insert_first_data.php');
   $test_id = $_POST['checked_test_id'];
   $result = 0;
   $right_result = 0;
@@ -23,7 +23,7 @@
 </head>
 <body>
 
-  <?php require '../includes/header.php'; ?>
+  <?php require('../includes/header.php'); ?>
 
   <div class="wrapper">
   <div class="test-header">

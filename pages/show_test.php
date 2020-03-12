@@ -1,5 +1,5 @@
 <?php
-  require '../includes/insert_first_data.php';
+  require('../includes/insert_first_data.php');
   $test_id = $_GET['id'];
   $test = R::load('tests', $test_id);
 
@@ -25,7 +25,7 @@
 </head>
 <body>
 
-  <?php require '../includes/header.php'; ?>
+  <?php require('../includes/header.php'); ?>
 
   <div class="wrapper">
   <div class="test-header">

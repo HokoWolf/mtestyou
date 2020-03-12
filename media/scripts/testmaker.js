@@ -36,24 +36,6 @@ $("#test_desc").change(function(){
   if (test_desc.value.length == 0) $("#test_desc").css("border", "1px solid #A9A9A9");
   if (test_desc.value !== '') $("#test_desc").css("border", "none");
 });
-  
-// textarea autosize
-/*function textareaAutosize() {
-  let elements = document.querySelectorAll('textarea');
-  for (let elem of elements){
-
-    elem.addEventListener('keydown', autosize);
-    function autosize(){
-      
-      var el = this;
-      setTimeout(function(){
-        el.style.cssText = 'height:auto; padding:0';
-        el.style.cssText = 'height:' + el.scrollHeight + 'px';
-      },0);
-    }
-  }
-}
-textareaAutosize();*/
 
 
 // change question from user view to constructor view

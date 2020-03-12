@@ -69,14 +69,12 @@
               }
             }
           ?>
-        </ul>
-      </nav>
-    </div>
+        </ul> <!--end of cat_menu-->
+      </nav> <!--end of nav_cat-->
+    </div> <!--end of categories div-->
 
     <div class="tests">
-
       <div class="row">
-
         <?php
           foreach ($tests as $test) {
             ?>
@@ -99,10 +97,8 @@
             <?php
           }
         ?>
-
-      </div>
-
-    </div>
+      </div> <!--row`s end-->
+    </div> <!--end of tests div-->
 
     <div class="paginator">
       <?php
@@ -146,9 +142,9 @@
           <?php
         }
       ?>
-    </div>
+    </div> <!--end of paginator-->
 
-  </div>
+  </div> <!--end of wrapper-->
 
 </body>
 </html>

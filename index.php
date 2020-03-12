@@ -1,4 +1,4 @@
-<?php require 'includes/insert_first_data.php'; ?>
+<?php require('includes/insert_first_data.php'); ?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -13,7 +13,8 @@
 	<link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet">
 </head>
 <body>
-	<?php require 'includes/header.php'; ?>
+
+	<?php require('includes/header.php'); ?>
 	<div class="banner">
 		<div class="banner-info">
 			<h1>makeTestyou</h1>
@@ -24,5 +25,6 @@
 			</ul>
 		</div>
 	</div>
+
 </body>
 </html>
