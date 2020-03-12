@@ -1,10 +1,9 @@
 <?php
-  require 'C:/Program Files/OSPanel/domains/maketestyou.loc/includes/insert_first_data.php';
+  require '../includes/insert_first_data.php';
   $test_id = $_GET['id'];
   $test = R::load('tests', $test_id);
-?>
-<?php
-  if(!$_SESSION['logged_user']){
+
+  if(!key_exists('logged_user', $_SESSION)){
     $_SESSION['back_page'] = $_SERVER['REQUEST_URI'];
     header('Location: /login.php');
   }

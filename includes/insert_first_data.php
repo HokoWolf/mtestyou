@@ -385,7 +385,7 @@
 
 		$quest17 = array(
 			'title' => 'Напишіть реакцію повного окиснення (горіння) етанолу (у відповідь напишіть суму всіх коефіцієнтів).',
-			'right_answ1' => '9'
+			'right_answ' => '9'
 		);
 
 		$test = R::load('tests', 4);
@@ -401,7 +401,7 @@
 				'answer1' => 'Так',
 				'answer2' => 'Ні'
 			),
-			'right_answ1' => 'answer1'
+			'right_answ' => 'answer1'
 		);
 
 		$test = R::load('tests', 4);

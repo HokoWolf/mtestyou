@@ -1,5 +1,5 @@
 <?php
-  require 'C:/Program Files/OSPanel/domains/maketestyou.loc/includes/insert_first_data.php';
+  require '../includes/insert_first_data.php';
   $test_id = $_POST['checked_test_id'];
   $result = 0;
   $right_result = 0;
@@ -40,7 +40,6 @@
           $q_i = 'question'.$counter.'_id';
           $q_a = 'question'.$counter;
           $q = json_decode($quest['quest'], true);
-          $question = $q['right_answ'];
           ?>
 
           <fieldset class="form-group">
@@ -55,45 +54,62 @@
 
                 for ($i = 1; $i <= count($q['answers']); $i++) {
 
-                  if('answer'.$i == $_POST[$q_a] && $question == $_POST[$q_a]){
-                    ?>
-                    <div class="radio_quest">
-                      <input style="cursor: auto;" type="radio" name="<?php echo 'question'.$counter; ?>" value="<?php echo 'answer'.$i; ?>" checked disabled>
-                      <label style="cursor: context-menu; padding: 6px; background-color: rgb(33, 166, 50); color: white;" for="<?php echo $quest['answer'.$i]; ?>"><?php echo $q['answers']['answer'.$i]; ?></label>
-                    </div>
-                    <?php
-                    $right_result++;
-                  }
-                  else if ('answer'.$i == $_POST[$q_a] && $question != $_POST[$q_a]) {
-                    ?>
-                    <div class="radio_quest">
-                      <input style="cursor: auto;" type="radio" name="<?php echo 'question'.$counter; ?>" value="<?php echo 'answer'.$i; ?>" checked disabled>
-                      <label style="cursor: context-menu; padding: 6px; background-color: rgb(166, 33, 33); color: white;" for="<?php echo $quest['answer'.$i]; ?>"><?php echo $q['answers']['answer'.$i]; ?></label>
-                    </div>
-                    <?php
-                  }
-                  else if ('answer'.$i == $question) {
-                    ?>
-                    <div class="radio_quest">
-                      <input style="cursor: auto;" type="radio" name="<?php echo 'question'.$counter; ?>" value="<?php echo 'answer'.$i; ?>" disabled>
-                      <label style="cursor: context-menu; padding: 6px; background-color: rgb(33, 166, 50); width: 100px; color: white;" for="<?php echo $quest['answer'.$i]; ?>"><?php echo $q['answers']['answer'.$i]; ?></label>
-                    </div>
-                    <?php
-                  }
-                  else{
-                    ?>
-                    <div class="radio_quest">
-                      <input style="cursor: auto;" type="radio" name="<?php echo 'question'.$counter; ?>" value="<?php echo 'answer'.$i; ?>" disabled>
-                      <label style="cursor: context-menu;" for="<?php echo $quest['answer'.$i]; ?>"><?php echo $q['answers']['answer'.$i]; ?></label>
-                    </div>
-                    <?php
-                  }
+                  $question = $q['right_answ'];
 
+                  if(!key_exists($q_a, $_POST)){
+                    if ('answer'.$i == $question) {
+                      ?>
+                      <div class="radio_quest">
+                        <input style="cursor: auto;" type="radio" name="<?php echo 'question'.$counter; ?>" value="<?php echo 'answer'.$i; ?>" disabled>
+                        <label style="cursor: context-menu; padding: 6px; background-color: rgb(33, 166, 50); width: 100px; color: white;" for="<?php echo $quest['answer'.$i]; ?>"><?php echo $q['answers']['answer'.$i]; ?></label>
+                      </div>
+                      <?php
+                    } else {
+                      ?>
+                      <div class="radio_quest">
+                        <input style="cursor: auto;" type="radio" name="<?php echo 'question'.$counter; ?>" value="<?php echo 'answer'.$i; ?>" disabled>
+                        <label style="cursor: context-menu;" for="<?php echo $quest['answer'.$i]; ?>"><?php echo $q['answers']['answer'.$i]; ?></label>
+                      </div>
+                      <?php
+                    }
+                  } else{
+                    if('answer'.$i == $_POST[$q_a] && $question == $_POST[$q_a]){
+                      ?>
+                      <div class="radio_quest">
+                        <input style="cursor: auto;" type="radio" name="<?php echo 'question'.$counter; ?>" value="<?php echo 'answer'.$i; ?>" checked disabled>
+                        <label style="cursor: context-menu; padding: 6px; background-color: rgb(33, 166, 50); color: white;" for="<?php echo $quest['answer'.$i]; ?>"><?php echo $q['answers']['answer'.$i]; ?></label>
+                      </div>
+                      <?php
+                      $right_result++;
+                    } else if ('answer'.$i == $_POST[$q_a] && $question != $_POST[$q_a]) {
+                      ?>
+                      <div class="radio_quest">
+                        <input style="cursor: auto;" type="radio" name="<?php echo 'question'.$counter; ?>" value="<?php echo 'answer'.$i; ?>" checked disabled>
+                        <label style="cursor: context-menu; padding: 6px; background-color: rgb(166, 33, 33); color: white;" for="<?php echo $quest['answer'.$i]; ?>"><?php echo $q['answers']['answer'.$i]; ?></label>
+                      </div>
+                      <?php
+                    } else if ('answer'.$i == $question) {
+                      ?>
+                      <div class="radio_quest">
+                        <input style="cursor: auto;" type="radio" name="<?php echo 'question'.$counter; ?>" value="<?php echo 'answer'.$i; ?>" disabled>
+                        <label style="cursor: context-menu; padding: 6px; background-color: rgb(33, 166, 50); width: 100px; color: white;" for="<?php echo $quest['answer'.$i]; ?>"><?php echo $q['answers']['answer'.$i]; ?></label>
+                      </div>
+                      <?php
+                    } else{
+                      ?>
+                      <div class="radio_quest">
+                        <input style="cursor: auto;" type="radio" name="<?php echo 'question'.$counter; ?>" value="<?php echo 'answer'.$i; ?>" disabled>
+                        <label style="cursor: context-menu;" for="<?php echo $quest['answer'.$i]; ?>"><?php echo $q['answers']['answer'.$i]; ?></label>
+                      </div>
+                      <?php
+                    }
+                  }
                 }
-
               }
 
               if ($quest['type'] == 'text') {
+
+                $question = $q['right_answ'];
 
                 if ($q['right_answ'] == $_POST[$q_a]) {
                   ?>
@@ -118,49 +134,70 @@
 
               if ($quest['type'] == 'check') {
 
+                $question = $q['right_answers'];
+
                 $check_res = 0;
 
                 for ($i = 1; $i <= count($q['answers']); $i++){
 
                   $q_a_ch = $q_a.'_'.$i;
 
-                  if('answer'.$i == $_POST[$q_a_ch] && in_array($_POST[$q_a_ch], $q['right_answers'])){
-                    ?>
-                    <div class="check_quest">
-                      <input style="cursor: context-menu;" type="checkbox" name="<?php echo 'question'.$counter; ?>" value="<?php echo 'answer'.$i; ?>" checked disabled>
-                      <label style="cursor: context-menu; padding: 6px; background-color: rgb(33, 166, 50); color: white;" for="<?php echo $q['answers']['answer'.$i]; ?>"><?php echo $q['answers']['answer'.$i]; ?></label>
-                    </div>
-                    <?php
-                    $check_res++;
+                  if(!key_exists($q_a_ch, $_POST)){
+                    if (in_array('answer'.$i, $q['right_answers'])){
+                      ?>
+                      <div class="check_quest">
+                        <input style="cursor: context-menu;" type="checkbox" name="<?php echo 'question'.$counter; ?>" value="<?php echo 'answer'.$i; ?>"  disabled>
+                        <label style="cursor: context-menu; padding: 6px; background-color: rgb(33, 166, 50); color: white;" for="<?php echo $q['answers']['answer'.$i]; ?>"><?php echo $q['answers']['answer'.$i]; ?></label>
+                      </div>
+                      <?php
+                    }
+  
+                    else{
+                      ?>
+                      <div class="check_quest">
+                        <input style="cursor: context-menu;" type="checkbox" name="<?php echo 'question'.$counter; ?>" value="<?php echo 'answer'.$i; ?>" disabled>
+                        <label style="cursor: context-menu;" for="<?php echo $q['answers']['answer'.$i]; ?>"><?php echo $q['answers']['answer'.$i]; ?></label>
+                      </div>
+                      <?php
+                    }
+                  } else {
+                    if('answer'.$i == $_POST[$q_a_ch] && in_array($_POST[$q_a_ch], $q['right_answers'])){
+                      ?>
+                      <div class="check_quest">
+                        <input style="cursor: context-menu;" type="checkbox" name="<?php echo 'question'.$counter; ?>" value="<?php echo 'answer'.$i; ?>" checked disabled>
+                        <label style="cursor: context-menu; padding: 6px; background-color: rgb(33, 166, 50); color: white;" for="<?php echo $q['answers']['answer'.$i]; ?>"><?php echo $q['answers']['answer'.$i]; ?></label>
+                      </div>
+                      <?php
+                      $check_res++;
+                    }
+  
+                    else if ('answer'.$i == $_POST[$q_a_ch] && in_array($_POST[$q_a_ch], $q['right_answers']) == false){
+                      ?>
+                      <div class="check_quest">
+                        <input style="cursor: context-menu;" type="checkbox" name="<?php echo 'question'.$counter; ?>" value="<?php echo 'answer'.$i; ?>" checked disabled>
+                        <label style="cursor: context-menu;  padding: 6px; background-color: rgb(166, 33, 33); color: white;" for="<?php echo $q['answers']['answer'.$i]; ?>"><?php echo $q['answers']['answer'.$i]; ?></label>
+                      </div>
+                      <?php
+                    }
+  
+                    else if (in_array('answer'.$i, $q['right_answers'])){
+                      ?>
+                      <div class="check_quest">
+                        <input style="cursor: context-menu;" type="checkbox" name="<?php echo 'question'.$counter; ?>" value="<?php echo 'answer'.$i; ?>"  disabled>
+                        <label style="cursor: context-menu; padding: 6px; background-color: rgb(33, 166, 50); color: white;" for="<?php echo $q['answers']['answer'.$i]; ?>"><?php echo $q['answers']['answer'.$i]; ?></label>
+                      </div>
+                      <?php
+                    }
+  
+                    else{
+                      ?>
+                      <div class="check_quest">
+                        <input style="cursor: context-menu;" type="checkbox" name="<?php echo 'question'.$counter; ?>" value="<?php echo 'answer'.$i; ?>" disabled>
+                        <label style="cursor: context-menu;" for="<?php echo $q['answers']['answer'.$i]; ?>"><?php echo $q['answers']['answer'.$i]; ?></label>
+                      </div>
+                      <?php
+                    }
                   }
-
-                  else if ('answer'.$i == $_POST[$q_a_ch] && in_array($_POST[$q_a_ch], $q['right_answers']) == false){
-                    ?>
-                    <div class="check_quest">
-                      <input style="cursor: context-menu;" type="checkbox" name="<?php echo 'question'.$counter; ?>" value="<?php echo 'answer'.$i; ?>" checked disabled>
-                      <label style="cursor: context-menu;  padding: 6px; background-color: rgb(166, 33, 33); color: white;" for="<?php echo $q['answers']['answer'.$i]; ?>"><?php echo $q['answers']['answer'.$i]; ?></label>
-                    </div>
-                    <?php
-                  }
-
-                  else if (in_array('answer'.$i, $q['right_answers'])){
-                    ?>
-                    <div class="check_quest">
-                      <input style="cursor: context-menu;" type="checkbox" name="<?php echo 'question'.$counter; ?>" value="<?php echo 'answer'.$i; ?>"  disabled>
-                      <label style="cursor: context-menu; padding: 6px; background-color: rgb(33, 166, 50); color: white;" for="<?php echo $q['answers']['answer'.$i]; ?>"><?php echo $q['answers']['answer'.$i]; ?></label>
-                    </div>
-                    <?php
-                  }
-
-                  else{
-                    ?>
-                    <div class="check_quest">
-                      <input style="cursor: context-menu;" type="checkbox" name="<?php echo 'question'.$counter; ?>" value="<?php echo 'answer'.$i; ?>" disabled>
-                      <label style="cursor: context-menu;" for="<?php echo $q['answers']['answer'.$i]; ?>"><?php echo $q['answers']['answer'.$i]; ?></label>
-                    </div>
-                    <?php
-                  }
-
                 }
 
                 if($check_res == count($q['right_answers'])){
@@ -183,7 +220,7 @@
 
     <div class="result"><p><?php echo 'Ваш результат: '.$right_result.' из '.$total_questions; ?></p></div>
 
-    <a class="go_to_cat" href="../tests.php">Test you</a>
+    <a class="go_to_cat" href="../tests.php?cat_id=0">Test you</a>
 
   </div>
 

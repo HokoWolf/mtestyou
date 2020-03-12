@@ -1,10 +1,10 @@
 @import url('https://fonts.googleapis.com/css?family=Roboto+Slab&display=swap');
 @import url('https://fonts.googleapis.com/css?family=Anton&display=swap');
 @import url('https://fonts.googleapis.com/css?family=Ubuntu&display=swap');
-body{
+body {
   background-color: #fafafa;
 }
-.wrapper{
+.wrapper {
   position: absolute;
   width: 70vw;
   height: 500px;
@@ -12,20 +12,20 @@ body{
   left: 50%;
   transform: translateX(-50%);
 }
-h1.page_title{
+h1.page_title {
   font-family: "Roboto", sans-serif;
   font-weight: bolder;
   font-size: 48px;
 }
-.nav_cat{
+.nav_cat {
   margin-left: 0 !important;
 }
-.cat{
+.cat {
   display: inline-block;
   text-align: center;
   margin-top: 40px;
 }
-.btn{
+.btn {
   background: none;
   border: 2px solid black;
   border-radius: 3px;
@@ -40,10 +40,10 @@ h1.page_title{
   transition: color 0.4s linear;
   position: relative;
 }
-.btn:hover{
+.btn:hover {
   color: #fff;
 }
-.btn::before{
+.btn::before {
   content: "";
   position: absolute;
   left: 0;
@@ -57,17 +57,17 @@ h1.page_title{
   transition-timing-function: ease-in-out;
   transform: scaleX(0);
 }
-.btn:hover::before{
+.btn:hover::before {
   transform: scaleX(1);
 }
-.btn.active{
+.btn.active {
   background-color: black;
   color: white;
 }
-.tests{
+.tests {
   margin-top: 50px;
 }
-.test{
+.test {
   background-color: white;
   max-width: 400px;
   min-width: 350px;
@@ -76,23 +76,23 @@ h1.page_title{
   margin-left: 0px;
   border: 1px solid rgb(99, 99, 99);
 }
-.test:hover{
+.test:hover {
   box-shadow: 1px 1px 10px black;
 }
-.test_image{
+.test_image {
   background-color: rgb(41, 64, 190);
   min-height: 150px;
   width: 100%;
   text-align: center;
   padding: 5%;
 }
-.test_image h2{
+.test_image h2 {
   position: relative;
   color: white;
   font-size: 32px;
   font-family: "Ubuntu", sans-serif;
 }
-.test_info{
+.test_info {
   padding: 25px;
   padding-bottom: 100px;
   font-size: 18px;
@@ -111,7 +111,7 @@ h1.page_title{
   margin-right: 3%;
   text-align: center;
 }
-.go_to_test a{
+.go_to_test a {
   display: block;
   height: 100%;
   width: 100%;
@@ -123,15 +123,15 @@ h1.page_title{
   font-weight: bold;
   font-style: italic;
 }
-.go_to_test:hover{
+.go_to_test:hover {
   box-shadow: 1px 1px 10px black;
   transform: scale(1.05);
 }
-.paginator{
+.paginator {
   margin-top: 20px;
   margin-bottom: 50px;
 }
-.pag_page{
+.pag_page {
   display: inline-block;
   height: 50px;
   line-height: 50px;
@@ -146,38 +146,38 @@ h1.page_title{
   font-size: 1.25em;
   font-weight: bold;
   transition: color 0.5s linear;
-  transition: background-color 0.5s linear
+  transition: background-color 0.5s linear;
 }
-.pag_page:hover{
+.pag_page:hover {
   color: #fff;
   background-color: #000;
 }
-.pag_page.active{
+.pag_page.active {
   color: #fff;
   background-color: #000;
 }
 @media screen and (max-width: 1480px) {
-  .wrapper{
+  .wrapper {
     width: 80vw;
   }
 }
 @media screen and (max-width: 1300px) {
-  .wrapper{
+  .wrapper {
     width: 90vw;
   }
 }
 @media screen and (max-width: 768px) {
-  .wrapper{
+  .wrapper {
     width: 90vw;
   }
-  .test{
+  .test {
     max-width: none;
     min-width: none;
-    width: 500px
+    width: 500px;
   }
 }
 @media screen and (max-width: 525px) {
-  .test{
+  .test {
     max-width: 400px;
     min-width: 350px;
   }

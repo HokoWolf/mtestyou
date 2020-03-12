@@ -6,26 +6,20 @@ if(!$_SESSION['logged_user']){
   header('Location: /login.php');
 }
 
-if(R::count( 'tests', 'name = ?', array( $_POST['test_title'] ) ) > 0){
-  ?>
-  <script type="text/javascript">
-    localStorage.setItem('Error', 'В базе данных уже имеется данное название теста!');
-    history.back();
-  </script>
-  <?php
-  exit();
-} else{
-  $test = R::dispense('tests');
-  $test->name = $_POST['test_title'];
-  $test->test_desc = $_POST['test_desc'];
-  $test->topics = R::load('topics', $_POST['categorie']);
-  R::store($test);
-}
-
 if($_POST['test_title'] == ''){
   ?>
   <script type="text/javascript">
     localStorage.setItem('Error', 'Вы не ввели название теста');
+    history.back();
+  </script>
+  <?php
+  exit();
+}
+
+if($_POST['categorie'] == ''){
+  ?>
+  <script type="text/javascript">
+    localStorage.setItem('Error', 'Вы не выбрали категорию');
     history.back();
   </script>
   <?php
@@ -42,15 +36,34 @@ if($_POST['test_desc'] == ''){
   exit();
 }
 
+
+if(R::count( 'tests', 'name = ?', array( $_POST['test_title'] ) ) > 0){
+  ?>
+  <script type="text/javascript">
+    localStorage.setItem('Error', 'В базе данных уже имеется данное название теста!');
+    history.back();
+  </script>
+  <?php
+  exit();
+} else{
+  $test = R::dispense('tests');
+  $test->name = $_POST['test_title'];
+  $test->test_desc = $_POST['test_desc'];
+  $test->topics = R::load('topics', $_POST['categorie']);
+  R::store($test);
+}
+
+
 $testId = R::getCell('SELECT id FROM tests WHERE name = ?', array($_POST['test_title']));
 
 
 for ($i = 1; $i <= (count($_POST) - 3) / 3; $i++) {
 
   $questId = 'quest'.$i;
-  $questType = $_POST[$questId.'_type'];
+
   if(!array_key_exists($questId, $_POST)) break;
 
+  $questType = $_POST[$questId.'_type'];
   $question = array(
     'title' => $_POST[$questId], 
   );
@@ -107,5 +120,5 @@ for ($i = 1; $i <= (count($_POST) - 3) / 3; $i++) {
 ?>
 <script type="text/javascript">
 localStorage.clear();
-window.location = "http://maketestyou.loc/tests.php";
+window.location = "http://maketestyou.loc/tests.php?cat_id=0";
 </script>

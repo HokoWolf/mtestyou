@@ -13,9 +13,7 @@
   <link rel="stylesheet" href="media/css/tests.css">
   <link rel="stylesheet" href="media/css/bootstrap-grid.min.css">
   <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet">
-
-
-  <script src="https://kit.fontawesome.com/545ee76f32.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" type="text/css" href="/media/fontawesome/css/all.min.css"></link>
 </head>
 <body>
   <?php require 'includes/header.php'; ?>
