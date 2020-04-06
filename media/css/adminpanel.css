@@ -1,0 +1,130 @@
+body {
+  background-color: #e7e7e7;
+}
+header {
+  position: relative;
+  display: flex;
+  z-index: 2;
+  width: 100%;
+  height: 60px;
+  background-color: #eee;
+}
+.header__logo {
+  cursor: pointer;
+}
+.header__logo img {
+  height: 60px;
+  background-color: #ddd;
+}
+#sidebarMenu {
+  position: absolute;
+  display: block;
+  left: -240px;
+  top: 0px;
+  width: 240px;
+  height: 100vh;
+  background: #ccc;
+  overflow: hidden;
+  transition: left 0.3s linear;
+}
+#sidebarMenu.visible {
+  left: 0;
+  transition: left 0.3s linear;
+}
+ul {
+  margin: 0;
+  margin-top: 80px;
+  padding: 0;
+}
+ul li a {
+  display: block;
+  width: 200px;
+  margin: 0px 10px 15px 10px;
+  padding: 15px 10px;
+  color: #eee;
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 18px;
+  background-color: #585858;
+}
+#logout {
+  position: absolute;
+  bottom: 0;
+  width: 160px;
+  margin: 0px 30px 15px 30px;
+}
+#container {
+  position: relative;
+  left: 0;
+  width: 98%;
+  height: 100%;
+  padding: 10px;
+  transition-property: width right;
+  transition-duration: 0.3s;
+  transition-timing-function: linear;
+}
+#container.visible {  
+  left: 240px;
+  width: calc(100% - 260px);
+  transition-property: width left;
+  transition-duration: 0.3s;
+  transition-timing-function: linear;
+}
+table,
+th,
+td {
+  border: 1px solid black;
+  border-collapse: collapse;
+}
+table {
+  position: relative;
+  display: none;
+  width: 100%;
+  height: 100%;
+  background-color: #ccc;
+}
+table.visible {
+  display: table;
+}
+table.flex-table {
+  width: 100%;
+}
+caption {
+  padding: 20px;
+  font-size: 24px;
+  font-weight: bold;
+  text-transform: uppercase;
+  text-shadow: 1px 1px 5px black;
+  color: #fff;
+  background-color: #939292;
+  border: 1px solid black;
+  border-bottom: none;
+}
+td {
+  padding: 5px 4px;
+  font-size: 12px;
+}
+th {
+  padding: 8px 4px;
+  font-size: 16px;
+  background-color: #aeaeae;
+}
+.options{
+  text-align: center;
+  font-size: 18px;
+  border: none;
+}
+td.options i{
+  cursor: pointer;
+}
+#insert{
+  position: relative;
+  float: right;
+  top: 25px;
+  right: 50px;
+  padding: 10px 30px;
+  font-size: 20px;
+  color: white;
+  text-transform: uppercase;
+  background-color: #585858;
+}

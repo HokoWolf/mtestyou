@@ -1,19 +1,20 @@
 /*          banner        */
-.banner{
+.banner {
   position: absolute;
   top: 0;
   height: 100vh;
   width: 100vw;
   text-align: center;
   color: white;
-  background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url("../images/bg.jpg");
+  background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
+    url("../images/bg.jpg");
   background-repeat: no-repeat;
   background-position: top;
   background-size: cover;
   overflow: hidden;
   z-index: 0;
 }
-.banner-info{
+.banner-info {
   position: relative;
   z-index: 1;
   top: 30%;
@@ -22,10 +23,11 @@
   height: 400px;
   width: 800px;
   padding: 50px;
-  background: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)), rgba(255, 255, 255, 0.1);
+  background: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)),
+    rgba(255, 255, 255, 0.1);
   box-shadow: 1px 1px 20px #000;
 }
-.banner-info h1{
+.banner-info h1 {
   margin-top: 50px;
   color: rgb(201, 201, 209);
   text-shadow: 1px 1px 10px #000;
@@ -35,17 +37,17 @@
   margin-bottom: 20px;
 }
 
-.banner-info h2{
+.banner-info h2 {
   color: rgb(201, 201, 209);
   text-shadow: 1px 1px 10px #000;
   font-size: 32px;
   font-family: "Ubuntu", sans-serif;
   margin-bottom: 60px;
 }
-.banner-info li{
+.banner-info li {
   display: inline-block;
 }
-.banner-bt{
+.banner-bt {
   width: 200px;
   height: 60px;
   line-height: 60px;
@@ -53,7 +55,7 @@
   margin: 0px 20px;
   box-shadow: 4px 4px 15px black;
 }
-.banner-bt a.bt-hrefs{
+.banner-bt a.bt-hrefs {
   display: block;
   text-align: center;
   height: 100%;
@@ -64,163 +66,160 @@
   font-size: 1.5em;
   font-family: "Roboto", sans-serif;
 }
-.banner-bt:hover{
-  background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), #343A40;
+.banner-bt:hover {
+  background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), #343a40;
 }
-.banner-bt a.bt-hrefs:hover{
+.banner-bt a.bt-hrefs:hover {
   text-decoration: underline;
   font-size: 1.6em;
 }
-p{
+p {
   margin: 50px;
 }
 /* media-queries, flexible design */
 @media screen and (max-width: 900px) {
-  .banner-info{
+  .banner-info {
     width: 700px;
     top: 25%;
   }
 }
-@media screen and (max-width: 800px){
-  .banner-info{
+@media screen and (max-width: 800px) {
+  .banner-info {
     width: 600px;
   }
 }
-@media screen and (max-width: 700px){
-  .banner-info{
+@media screen and (max-width: 700px) {
+  .banner-info {
     width: 500px;
   }
 }
-@media screen and (max-width: 650px){
-  .banner-info{
+@media screen and (max-width: 650px) {
+  .banner-info {
     width: 480px;
   }
-  h1{
+  h1 {
     margin: 5px;
   }
-  .banner-bt{
+  .banner-bt {
     width: 180px;
   }
 }
-@media screen and (max-width: 600px){
-  .banner-info{
+@media screen and (max-width: 600px) {
+  .banner-info {
     width: 450px;
   }
-  .banner-bt{
+  .banner-bt {
     width: 180px;
   }
 }
-@media screen and (max-width: 550px){
-  .banner-info{
+@media screen and (max-width: 550px) {
+  .banner-info {
     width: 430px;
     padding: 30px;
   }
-  h1{
+  h1 {
     font-size: 64px !important;
   }
-  .banner-bt{
+  .banner-bt {
     width: 180px;
     margin: 0 10px;
   }
 }
-@media screen and (max-width: 500px){
-  .banner-info{
+@media screen and (max-width: 500px) {
+  .banner-info {
     width: 400px;
     padding: 20px;
   }
-  h1{
+  h1 {
     font-size: 56px !important;
   }
-  .banner-bt{
+  .banner-bt {
     width: 160px;
     margin: 0 5px;
   }
 }
-@media screen and (max-width: 450px){
-  .banner-info{
+@media screen and (max-width: 450px) {
+  .banner-info {
     width: 370px;
     padding: 14px;
   }
-  h1{
+  h1 {
     font-size: 52px !important;
   }
-  .banner-bt{
+  .banner-bt {
     width: 160px;
   }
 }
-@media screen and (max-width: 400px){
-  .banner-info{
+@media screen and (max-width: 400px) {
+  .banner-info {
     width: 320px;
     padding: 12px;
-    top: 18%;
+    top: 22%;
   }
-  h1{
+  h1 {
     font-size: 46px !important;
   }
-  h2{
+  h2 {
     font-size: 28px !important;
   }
-  .banner-bt{
+  .banner-bt {
     width: 140px;
   }
 }
-@media screen and (max-width: 350px){
-  .banner-info{
+@media screen and (max-width: 350px) {
+  .banner-info {
     width: 280px;
     height: 350px;
     padding: 10px;
   }
-  h1{
+  h1 {
     font-size: 38px !important;
   }
-  h2{
+  h2 {
     font-size: 26px !important;
   }
-  .banner-bt{
+  .banner-bt {
     width: 120px;
     height: 45px;
     line-height: 45px;
   }
 }
 
-
-
-@media (max-width: 850px) and (max-height: 450px){
-  .banner-info{
-    top: 20vh;
+@media (max-width: 850px) and (max-height: 450px) {
+  .banner-info {
     width: 70vw;
     height: 250px;
     padding-top: 40px;
     padding-bottom: 0px;
   }
-  h1{
+  h1 {
     margin-top: 0px !important;
     font-size: 56px !important;
   }
-  h2{
+  h2 {
     margin-bottom: 30px !important;
   }
-  .banner-bt{
+  .banner-bt {
     margin-bottom: 10px !important;
     width: 180px;
     height: 50px;
     line-height: 50px;
   }
 }
-@media (max-width: 850px) and (max-height: 350px){
-  .banner-info{
+@media (max-width: 850px) and (max-height: 350px) {
+  .banner-info {
     width: 80vw;
     height: 220px;
     padding-top: 20px;
     padding-bottom: 10px;
   }
-  h1{
+  h1 {
     font-size: 48px !important;
   }
-  h2{
+  h2 {
     margin-bottom: 10px !important;
   }
-  .banner-bt{
+  .banner-bt {
     width: 160px;
   }
 }

@@ -1,0 +1,256 @@
+/*conect fonts*/
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,700&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Ubuntu&display=swap');
+
+body{
+  background: linear-gradient(rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.55)), url('../images/choose.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: top;
+}
+
+.wrapper{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  display: block;
+  width: 640px;
+  height: 320px;
+  padding: 50px;
+
+  font-family: "Open Sans", "Tahoma", sans-serif;
+  font-size: 28px;
+  font-weight: bold;
+  text-transform: uppercase;
+  text-align: center;
+
+  background: linear-gradient(rgb(117, 117, 117, 0.4), rgba(117, 117, 117, 0.4));
+  box-shadow: 1px 1px 20px black;
+}
+
+.wrapper h2{
+  margin-bottom: 60px;
+  font-family: "Ubuntu", "Arial", sans-serif;
+  color: rgb(9, 2, 41);
+}
+
+.wrapper > a{
+  position: relative;
+  top: 40%;
+
+  display: inline-block;
+  width: 250px;
+  height: 80px;
+
+  line-height: 80px;
+  color: black;
+
+  background-color: #fff;
+  border: 2px solid black;
+  border-radius: 20px;
+}
+
+#student{
+  margin-right: 25px;
+  color: black;
+  background-color: rgb(238, 240, 219);
+}
+
+#student:hover{
+  background-color: rgb(220, 220, 220);
+}
+
+#teacher{
+  margin-left: 25px;
+  color: white;
+  background-color: rgb(12, 13, 53);
+}
+
+#teacher:hover{
+  background: linear-gradient(rgb(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5));
+  background-color: rgb(12, 13, 53);
+}
+
+small{
+  position: relative;
+  display: block;
+  top: 30px;
+  color: rgb(26, 26, 26);
+  font-size: 18px;
+}
+
+a.dosignup{
+  color: rgb(36, 36, 114);
+  font-weight: bold;
+  font-style: italic;
+}
+
+a.dosignup:visited{
+  color: rgb(36, 36, 114);
+  font-weight: bold;
+  font-style: italic;
+}
+
+@media (max-width: 800px){
+  .wrapper{
+    width: 580px;
+  }
+}
+
+@media (max-width: 700px){
+  .wrapper{
+    width: 520px;
+  }
+
+  .wrapper > a{
+    width: 220px;
+  }
+}
+
+@media (max-width: 650px){
+  .wrapper{
+    width: 480px;
+    height: 280px;
+  }
+
+  h2{
+    font-size: 32px;
+  }
+
+  small{
+    font-size: 16px;
+  }
+
+  .wrapper > a{
+    width: 180px;
+    height: 70px;
+    line-height: 70px;
+  }
+}
+
+@media (max-width: 600px){
+  .wrapper{
+    width: 380px;
+    height: 240px;
+  }
+
+  h2{
+    font-size: 28px;
+  }
+
+  .wrapper > a{
+    width: 160px;
+    height: 60px;
+    line-height: 60px;
+    font-size: 24px;
+  }
+
+  #student{
+    margin-right: 15px;
+  }
+
+  #teacher{
+    margin-left: 15px;
+  }
+}
+
+@media (max-width: 500px){
+  .wrapper{
+    width: 320px;
+  }
+
+  h2{
+    font-size: 23px;
+  }
+
+  .wrapper > a{
+    width: 140px;
+    font-size: 20px;
+    border-radius: 12px;
+  }
+
+  #student{
+    margin-right: 5px;
+  }
+
+  #teacher{
+    margin-left: 5px;
+  }
+}
+
+@media (max-width: 450px){
+  .wrapper{
+    width: 280px;
+  }
+
+  .wrapper > a{
+    width: 120px;
+    height: 55px;
+    line-height: 55px;
+  }
+
+  #student{
+    margin-right: 2px;
+  }
+
+  #teacher{
+    margin-left: 2px;
+  }
+}
+
+@media (max-width: 400px){
+  .wrapper{
+    width: 240px;
+    height: 280px;
+    padding: 50px 40px;
+  }
+
+  h2{
+    font-size: 23px;
+  }
+
+  small{
+    font-size: 16px;
+  }
+
+  .wrapper > a{
+    position: relative;
+    display: block;
+    top: -40px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 200px;
+    height: 60px;
+    line-height: 60px;
+    font-size: 22px;
+    margin: 10px 0;
+  }
+
+  small{
+    margin-top: -50px;
+  }
+}
+
+@media (max-width: 350px){
+  .wrapper{
+    width: 200px;
+    height: 280px;
+    padding: 50px 40px;
+  }
+
+  h2{
+    font-size: 20px;
+  }
+
+  .wrapper > a{
+    width: 180px;
+    font-size: 22px;
+  }
+
+  small{
+    font-size: 15px;
+  }
+}

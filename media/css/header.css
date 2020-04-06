@@ -1,21 +1,24 @@
 header{
-  width: 100%;
-  background: #eee;
-  display: flex;
   position: absolute;
+  display: flex;
   z-index: 2;
+  width: 100%;
+  height: 80px;
+  background-color: #eee;
 }
 .header__logo{
   cursor: pointer;
-  margin-left: 5%;
-  height: 80px;
 }
 .header__logo img{
-  height: 100%;
+  height: 80px;
+  margin-left: 5%;
 }
 nav{
-  margin-left: 35%;
-  margin-top: 30px !important;
+  position: absolute;
+  display: block;
+  right: 4%;
+  height: 80px;
+  line-height: 80px;  
 }
 .topnav a{
   color: #000;
@@ -29,6 +32,9 @@ nav{
 }
 .topnav .icon{
   display: none;
+  margin-top: 15px;
+  font-size: 25px;
+  line-height: 30px;
 }
 .log_bt{
   margin-left: 60px;
@@ -41,155 +47,81 @@ nav{
   border-bottom: none !important;
   box-shadow: 1px 1px 10px #000;
 }
-@media screen and (max-width: 1630px) {
-  nav{
-    margin-left: 30%;
-  }
-}
-@media screen and (max-width: 1480px) {
-  nav{
-    margin-left: 25%;
-  }
-}
-@media screen and (max-width: 1380px) {
-  nav{
-    margin-left: 15%;
-  }
-  .log_bt{
-    margin-left: 40px !important;
-  }
-}
-@media screen and (max-width: 1190px) {
-  nav{
-    margin-left: 10%;
-  }
-  .log_bt{
-    margin-left: 20px;
-  }
-}
-@media screen and (max-width: 1100px) {
+
+@media screen and (max-width: 950px) {
   .topnav a{
     display: none;
   }
-  .topnav a.icon{
-    display: block;
-    float: right;
-    margin-top: -17px;
-    color: #000;
-    font-size: 25px;
-  }
-  nav{
-    width: 100%
-  }
   .topnav.responsive{
-    position: relative;
-    top: 50px;
-    left: -250px;
-  }
-  header .topnav.responsive{
-    height: 340px;
-  }
-  .topnav.responsive a.icon{
     position: absolute;
-    float: right;
-    top: -50px;
-    right: -250px;
+    right: -4vw;
+    top: 80px;
+    width: 100vw;
+    height: 375px;
+    background-color: #ddd;
   }
-  .topnav.responsive a{
-    float: none;
+  .topnav .icon{
     display: block;
-    text-align: left;
+    width: 20px;
+  }
+  .topnav.responsive .icon{
+    position: absolute;
+    top: -80px;
+    right: 4%;
+    width: 20px;
+    padding: 12px 16px;
+  }
+  .topnav.responsive a:not(.icon){
+    position: relative;
+    display: block;
+    left: 5%;
+    margin: 25px 0;
+    padding: 0 !important;
+    width: 200px;
+    height: 60px;
+    line-height: 60px;
   }
   .log_bt{
-    margin-left: 0 !important;
-    margin-top: 20px !important;
-    width: 140px !important;
-    padding: 15px 20px !important;
-    text-align: center !important;
+    margin: 0;
+    padding: 0 !important;
+    width: 200px;
+    height: 70px !important;
+    line-height: 70px !important;
   }
 }
-@media screen and (max-width: 570px) {
-  .header__logo{
-    height: 60px;
+@media (max-width: 400px){
+  header{
+    height: 70px;
   }
   .header__logo img{
-    height: 100%;
-    margin-top: 10px;
-  }
-}
-@media screen and (max-width: 500px) {
-  .topnav.responsive a.icon{
-    right: -290px;
+    height: 70px;
   }
   .topnav.responsive{
-    position: relative;
-    top: 50px;
+    position: absolute;
+    top: 70px;
   }
-  nav{
-    margin-right: 0px;
-    margin-left: 5%;
+  .topnav .icon{
+    margin-top: 10px;
   }
-}
-@media screen and (max-width: 500px) {
-  nav{
-    margin-left: 50px;
-    width: 25%;
+  .topnav.topnav.responsive .icon{
+    top: -70px;
   }
 }
-@media screen and (max-width: 500px) {
-  .topnav.responsive a.icon{
-    right: -250px;
-  }
-  nav{
-    width: 25%;
-  }
-}
-@media screen and (max-width: 400px) {
-  .topnav.responsive a.icon{
-    right: -250px;
-  }
-  nav{
-    width: 10%;
-  }
-}
-@media screen and (max-width: 325px) {
-  .topnav.responsive a.icon{
-    right: -240px;
-  }
-  nav{
-    width: 5%;
-  }
-}
-
-
-
-@media (max-height: 450px){
+@media (max-width: 350px){
   header{
-    top: -30px;
-  }
-  header > .topnav:not(.responsive){
-    height: 40px;
-    background-color: #fff;
-  }
-  .header__logo img{
-    position: relative;
     height: 60px;
-    bottom: -25px;
-  }
-  a#menu{
-    margin-top: 0px;
-    font-size: 20px;
-  }
-}
-@media (max-height: 350px){
-  header{
-    top: -10px;
   }
   .header__logo img{
-    height: 90%;
-    bottom: 0px;
+    height: 60px;
   }
-  a#menu{
-    margin-top: -20px;
+  .topnav.responsive{
+    position: absolute;
+    top: 60px;
+  }
+  .topnav .icon{
+    margin-top: 5px;
+  }
+  .topnav.topnav.responsive .icon{
+    top: -60px;
   }
 }

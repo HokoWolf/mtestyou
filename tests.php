@@ -87,7 +87,7 @@
                 <div class="test_info">
                   <p><?php echo mb_strimwidth($test['test_desc'], 0, 100).' ...'; ?></p>
                   <div class="go_to_test">
-                    <a href="pages/show_test.php?id=<?php echo $test['id']; ?>">Test you</a>
+                    <a href="pages/test/show_test.php?id=<?php echo $test['id']; ?>">Test you</a>
                   </div>
                 </div>
 

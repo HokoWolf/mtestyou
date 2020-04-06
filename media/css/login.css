@@ -1,24 +1,19 @@
 /*conect fonts*/
 @import url('https://fonts.googleapis.com/css?family=Lobster&display=swap');
 @import url('https://fonts.googleapis.com/css?family=Fjalla+One&display=swap');
-body{
-  background: linear-gradient(rgba(0, 0, 0, 0.35), rgba(0, 0, 0, 0.35)), url('../images/login.jpg');
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-attachment: fixed;
-  background-position: top;
-}
+@import url('https://fonts.googleapis.com/css?family=Open+Sans&display=swap');
 
 .login{
-  width: 420px;
-  height: auto;
   position: absolute;
-  top: 20% !important;
+  top: 20%;
   left: 50%;
   transform: translateX(-50%);
-  background-color: rgba(117,117,117,.53);
-  box-shadow: 0 0 10px rgba(0,0,0,0.5);
+  width: 440px;
+  height: auto;
+  margin-bottom: 40px;
   padding: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  background-color: rgba(117, 117, 117, .53);
 }
 
 .logheader {
@@ -39,7 +34,7 @@ label{
   position: relative;
   display: inline-block;
   width: auto;
-  margin-left: 50%;
+  left: 50%;
   margin-bottom: 10px;
   transform: translateX(-50%);
   color: black;
@@ -59,7 +54,7 @@ input{
   border-radius: .25em;
   width: 95%;
   font-size: 1em;
-  font-family: 'Tahoma', sans-serif;
+  font-family: 'Open Sans', 'Tahoma', sans-serif;
   padding: 6px;
   padding-left: 10px;
 }
@@ -69,7 +64,7 @@ button{
   font-size: 1.3em;
   font-weight: bold;
   width: 100%;
-  line-height: 1.5;
+  line-height: 1.5em;
   padding: 8px;
   border: 1px solid #343a40;
   border-radius: .25em;
@@ -80,10 +75,56 @@ button{
   margin-bottom: 10px;
 }
 
+select{
+  position: relative;
+  display: block;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80%;
+  height: 36px;
+  margin-bottom: 20px;
+  padding-left: 10px;
+  font-family: 'Open Sans', 'Tahoma', sans-serif;
+  font-size: 1em;
+  text-align: center;
+  border-radius: 5px;
+}
+
 .errors{
   margin-bottom: 10px;
 }
 small{
   color: rgb(26, 26, 26);
   font-size: 18px;
+}
+a.dosignup{
+  color: rgb(36, 36, 114);
+  font-weight: bold;
+  font-style: italic;
+}
+a.dosignup:visited{
+  color: rgb(36, 36, 114);
+  font-weight: bold;
+  font-style: italic;
+}
+
+@media screen and (max-width: 500px) {
+  .login{
+    width: 400px;
+  }
+}
+@media screen and (max-width: 450px) {
+  .login{
+    width: 359px;
+  }
+}
+@media screen and (max-width: 400px) {
+  .login{
+    width: 300px;
+  }
+}
+@media screen and (max-width: 350px) {
+  .login{
+    width: 250px;
+  }
 }

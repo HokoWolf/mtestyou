@@ -18,6 +18,7 @@ h1.page_title {
   font-size: 48px;
 }
 .nav_cat {
+  position: relative;
   margin-left: 0 !important;
 }
 .cat {

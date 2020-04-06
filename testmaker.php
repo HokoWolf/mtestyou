@@ -19,7 +19,7 @@
 	<link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet">
   <link rel="stylesheet" type="text/css" href="/media/fontawesome/css/all.min.css"></link>
 
-  <script src="../media/scripts/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+  <script src="/media/js/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
 </head>
 <body>
   <?php require "includes/header.php"; ?>
@@ -233,7 +233,7 @@
     
 
   </script>
-  <script type="text/javascript" src="media/scripts/testmaker.js"></script>
+  <script type="text/javascript" src="media/js/testmaker.js"></script>
   
 
 </body>
