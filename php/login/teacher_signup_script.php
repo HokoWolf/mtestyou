@@ -34,7 +34,7 @@ if (isset($data['do_signup']))
     $user->type = 'teacher';
     $user->firstname = $data['firstname'];
 	  $user->lastname = $data['lastname'];
-	  $user->subject = R::load('topics', $data['subject']);
+	  $user->topics = R::load('topics', $data['subject']);
     R::store($user);
     $_SESSION['logged_user'] = $user;
     if (isset($_SESSION['back_page'])) {

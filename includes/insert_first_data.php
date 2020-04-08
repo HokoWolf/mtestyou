@@ -29,7 +29,7 @@ if(R::count('users') == 0)
 	$user3->type = 'teacher';
 	$user3->firstname = 'Алексей';
 	$user3->lastname = 'Хоменко';
-	$user3->subject = R::load('topics', 4);
+	$user3->topics = R::load('topics', 4);
 	R::store($user3);
 
 	$user4 = R::dispense('users');
@@ -109,7 +109,7 @@ if(R::count('questions') == 0)
 	$test = R::load('tests', 1);
 	$question1 = R::dispense('questions');
 	$question1->type = 'radio';
-	$question1->quest = json_encode($quest1);
+	$question1->quest = json_encode($quest1, JSON_UNESCAPED_UNICODE);
 	$test->ownTestList[] = $question1;
 	R::store($test);
 	
@@ -126,7 +126,7 @@ if(R::count('questions') == 0)
 	$test = R::load('tests', 1);
 	$question2 = R::dispense('questions');
 	$question2->type = 'radio';
-	$question2->quest = json_encode($quest2);
+	$question2->quest = json_encode($quest2, JSON_UNESCAPED_UNICODE);
 	$test->ownTestList[] = $question2;
 	R::store($test);
 	
@@ -143,7 +143,7 @@ if(R::count('questions') == 0)
 	$test = R::load('tests', 1);
 	$question3 = R::dispense('questions');
 	$question3->type = 'radio';
-	$question3->quest = json_encode($quest3);
+	$question3->quest = json_encode($quest3, JSON_UNESCAPED_UNICODE);
 	$test->ownTestList[] = $question3;
 	R::store($test);
 	
@@ -160,7 +160,7 @@ if(R::count('questions') == 0)
 	$test = R::load('tests', 1);
 	$question4 = R::dispense('questions');
 	$question4->type = 'radio';
-	$question4->quest = json_encode($quest4);
+	$question4->quest = json_encode($quest4, JSON_UNESCAPED_UNICODE);
 	$test->ownTestList[] = $question4;
 	R::store($test);
 	
@@ -177,7 +177,7 @@ if(R::count('questions') == 0)
 	$test = R::load('tests', 1);
 	$question5 = R::dispense('questions');
 	$question5->type = 'radio';
-	$question5->quest = json_encode($quest5);
+	$question5->quest = json_encode($quest5, JSON_UNESCAPED_UNICODE);
 	$test->ownTestList[] = $question5;
 	R::store($test);
 	
@@ -194,7 +194,7 @@ if(R::count('questions') == 0)
 	$test = R::load('tests', 2);
 	$question6 = R::dispense('questions');
 	$question6->type = 'radio';
-	$question6->quest = json_encode($quest6);
+	$question6->quest = json_encode($quest6, JSON_UNESCAPED_UNICODE);
 	$test->ownTestList[] = $question6;
 	R::store($test);
 	
@@ -211,7 +211,7 @@ if(R::count('questions') == 0)
 	$test = R::load('tests', 2);
 	$question7 = R::dispense('questions');
 	$question7->type = 'radio';
-	$question7->quest = json_encode($quest7);
+	$question7->quest = json_encode($quest7, JSON_UNESCAPED_UNICODE);
 	$test->ownTestList[] = $question7;
 	R::store($test);
 	
@@ -228,7 +228,7 @@ if(R::count('questions') == 0)
 	$test = R::load('tests', 2);
 	$question8 = R::dispense('questions');
 	$question8->type = 'radio';
-	$question8->quest = json_encode($quest8);
+	$question8->quest = json_encode($quest8, JSON_UNESCAPED_UNICODE);
 	$test->ownTestList[] = $question8;
 	R::store($test);
 	
@@ -245,7 +245,7 @@ if(R::count('questions') == 0)
 	$test = R::load('tests', 2);
 	$question9 = R::dispense('questions');
 	$question9->type = 'radio';
-	$question9->quest = json_encode($quest9);
+	$question9->quest = json_encode($quest9, JSON_UNESCAPED_UNICODE);
 	$test->ownTestList[] = $question9;
 	R::store($test);
 	
@@ -262,7 +262,7 @@ if(R::count('questions') == 0)
 	$test = R::load('tests', 2);
 	$question10 = R::dispense('questions');
 	$question10->type = 'radio';
-	$question10->quest = json_encode($quest10);
+	$question10->quest = json_encode($quest10, JSON_UNESCAPED_UNICODE);
 	$test->ownTestList[] = $question10;
 	R::store($test);
 	
@@ -279,7 +279,7 @@ if(R::count('questions') == 0)
 	$test = R::load('tests', 3);
 	$question11 = R::dispense('questions');
 	$question11->type = 'radio';
-	$question11->quest = json_encode($quest11);
+	$question11->quest = json_encode($quest11, JSON_UNESCAPED_UNICODE);
 	$test->ownTestList[] = $question11;
 	R::store($test);
 	
@@ -296,7 +296,7 @@ if(R::count('questions') == 0)
 	$test = R::load('tests', 3);
 	$question12 = R::dispense('questions');
 	$question12->type = 'radio';
-	$question12->quest = json_encode($quest12);
+	$question12->quest = json_encode($quest12, JSON_UNESCAPED_UNICODE);
 	$test->ownTestList[] = $question12;
 	R::store($test);
 	
@@ -313,7 +313,7 @@ if(R::count('questions') == 0)
 	$test = R::load('tests', 3);
 	$question13 = R::dispense('questions');
 	$question13->type = 'radio';
-	$question13->quest = json_encode($quest13);
+	$question13->quest = json_encode($quest13, JSON_UNESCAPED_UNICODE);
 	$test->ownTestList[] = $question13;
 	R::store($test);
 	
@@ -330,7 +330,7 @@ if(R::count('questions') == 0)
 	$test = R::load('tests', 3);
 	$question14 = R::dispense('questions');
 	$question14->type = 'radio';
-	$question14->quest = json_encode($quest14);
+	$question14->quest = json_encode($quest14, JSON_UNESCAPED_UNICODE);
 	$test->ownTestList[] = $question14;
 	R::store($test);
 	
@@ -347,7 +347,7 @@ if(R::count('questions') == 0)
 	$test = R::load('tests', 3);
 	$question15 = R::dispense('questions');
 	$question15->type = 'radio';
-	$question15->quest = json_encode($quest15);
+	$question15->quest = json_encode($quest15, JSON_UNESCAPED_UNICODE);
 	$test->ownTestList[] = $question15;
 	R::store($test);
 	
@@ -372,7 +372,7 @@ if(R::count('questions') == 0)
 	$test = R::load('tests', 4);
 	$question16 = R::dispense('questions');
 	$question16->type = 'check';
-	$question16->quest = json_encode($quest16);
+	$question16->quest = json_encode($quest16, JSON_UNESCAPED_UNICODE);
 	$test->ownTestList[] = $question16;
 	R::store($test);
 	
@@ -383,7 +383,7 @@ if(R::count('questions') == 0)
 	$test = R::load('tests', 4);
 	$question17 = R::dispense('questions');
 	$question17->type = 'text';
-	$question17->quest = json_encode($quest17);
+	$question17->quest = json_encode($quest17, JSON_UNESCAPED_UNICODE);
 	$test->ownTestList[] = $question17;
 	R::store($test);
 	
@@ -398,7 +398,7 @@ if(R::count('questions') == 0)
 	$test = R::load('tests', 4);
 	$question18 = R::dispense('questions');
 	$question18->type = 'radio';
-	$question18->quest = json_encode($quest18);
+	$question18->quest = json_encode($quest18, JSON_UNESCAPED_UNICODE);
 	$test->ownTestList[] = $question18;
 	R::store($test);
 	
@@ -413,7 +413,7 @@ if(R::count('questions') == 0)
 	$test = R::load('tests', 4);
 	$question19 = R::dispense('questions');
 	$question19->type = 'radio';
-	$question19->quest = json_encode($quest19);
+	$question19->quest = json_encode($quest19, JSON_UNESCAPED_UNICODE);
 	$test->ownTestList[] = $question19;
 	R::store($test);
 	
@@ -430,7 +430,7 @@ if(R::count('questions') == 0)
 	$test = R::load('tests', 4);
 	$question20 = R::dispense('questions');
 	$question20->type = 'radio';
-	$question20->quest = json_encode($quest20);
+	$question20->quest = json_encode($quest20, JSON_UNESCAPED_UNICODE);
 	$test->ownTestList[] = $question20;
 	R::store($test);
 	
@@ -446,7 +446,7 @@ if(R::count('questions') == 0)
 	$test = R::load('tests', 4);
 	$question21 = R::dispense('questions');
 	$question21->type = 'radio';
-	$question21->quest = json_encode($quest21);
+	$question21->quest = json_encode($quest21, JSON_UNESCAPED_UNICODE);
 	$test->ownTestList[] = $question21;
 	R::store($test);
 	
@@ -463,7 +463,7 @@ if(R::count('questions') == 0)
 	$test = R::load('tests', 4);
 	$question22 = R::dispense('questions');
 	$question22->type = 'radio';
-	$question22->quest = json_encode($quest22);
+	$question22->quest = json_encode($quest22, JSON_UNESCAPED_UNICODE);
 	$test->ownTestList[] = $question22;
 	R::store($test);
 } # end of if(questions)

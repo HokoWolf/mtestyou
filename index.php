@@ -1,4 +1,8 @@
-<?php require('includes/insert_first_data.php'); ?>
+<?php
+	require('includes/insert_first_data.php');
+	if($_SESSION['logged_user']['type'] == 'admin')
+		header('Location: pages/admin/adminpanel.php');
+?>
 <!DOCTYPE html>
 <html>
 <head>

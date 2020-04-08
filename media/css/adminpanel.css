@@ -17,7 +17,7 @@ header {
   background-color: #ddd;
 }
 #sidebarMenu {
-  position: absolute;
+  position: fixed;
   display: block;
   left: -240px;
   top: 0px;
@@ -123,6 +123,7 @@ td.options i{
   top: 25px;
   right: 50px;
   padding: 10px 30px;
+  margin-bottom: 50px;
   font-size: 20px;
   color: white;
   text-transform: uppercase;

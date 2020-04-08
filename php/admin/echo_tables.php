@@ -17,10 +17,10 @@ foreach ($database as $name => $table)
       for ($i = 0; $i < count($table); $i++)
       {
         ?>
-        <tr>
+        <tr id="<?php echo $name.'_'.$table[$i]['id']; ?>">
           <?php
-            foreach ($table[$i] as $value) {
-              ?><td contenteditable="false" spellcheck="false"><?php echo $value; ?></td><?php
+            foreach ($table[$i] as $key => $value) {
+              ?><td id="<?php echo $name.'_'.$table[$i]['id'].'_'.$key?>" contenteditable="false" spellcheck="false"><?php echo $value; ?></td><?php
             }
           ?>
           <td class="options delete"><i class="fas fa-trash-alt"></i></td>

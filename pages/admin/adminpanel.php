@@ -12,7 +12,7 @@
   </head>
   <body>
     <header>
-      <a title="На главную страницу" href="#" id="sidebar-btn">
+      <a title="Menu" href="#" id="sidebar-btn">
         <div class="header__logo">
           <img src="/media/images/logohead.png" alt="logo" />
         </div>
@@ -33,5 +33,6 @@
 
     <script type="text/javascript" src="/media/js/jquery-3.4.1.min.js"></script>
     <script type="text/javascript" src="/media/js/adminpanel.js"></script>
+    
   </body>
 </html>

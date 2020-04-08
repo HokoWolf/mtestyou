@@ -5,7 +5,11 @@
       <a href="#" id="menu" class="icon">&#9776;</a>
       <a href="/">HOME</a>
       <a href="/tests.php?cat_id=0">TESTS</a> <!--/tests.php?cat_id=0-->
-      <a href="/testmaker.php">CONSTRUCTOR</a> <!--/testmaker.php-->
+      <?php
+        if($_SESSION['logged_user']['type'] == 'teacher'){
+          ?><a href="/testmaker.php">CONSTRUCTOR</a> <!--/testmaker.php--><?php
+        }
+      ?>
       <?php
         if (isset($_SESSION['logged_user']))
           echo '<a href="/php/login/logout.php" class="log_bt">LOG OUT</a>';

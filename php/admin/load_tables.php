@@ -5,4 +5,5 @@ $database = array(
   'users' => R::getAll( 'SELECT * FROM `users`' ),
   'topics' => R::getAll( 'SELECT * FROM `topics`' ),
   'tests' => R::getAll( 'SELECT * FROM `tests`' ),
+  'questions' => R::getAll( 'SELECT * FROM `questions`' )
 );
